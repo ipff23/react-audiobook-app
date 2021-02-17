@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# BeekChallenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Instruccions.
 
-## Available Scripts
+Install all dependecies.
 
-In the project directory, you can run:
+```bash
+yarn install
+```
 
-### `yarn start`
+Create .env file including envioroment variables values:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+REACT_APP_API_TOKEN=API_TOKEN_HERE
+REACT_APP_API_ENVIROMENT=API_ENVIROMENT_HERE
+REACT_APP_API_SPACE_ID=API_SPACE_ID_HERE
+REACT_APP_API_X_CONTENTFUL_CONTENT_TYPE=CONTENT_TYPE_HERE
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Run the application:
 
-### `yarn test`
+```bash
+yarn start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+After that we would be ready to navigate through our application.
 
-### `yarn build`
+We can do different actions here:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- If we want to visualize **All the current books** we would find them in **Browse** page.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  ![doc-images/Screenshot_2021-02-16_at_21.55.25.png](doc-images/Screenshot_2021-02-16_at_21.55.25.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- If we want to search an specific Audiobook in the list, we just type on the finder click Enter or Search and it would show us either the coincidences or the specific Audiobook.
 
-### `yarn eject`
+![doc-images/Screenshot_2021-02-16_at_21.51.06.png](doc-images/Screenshot_2021-02-16_at_21.51.06.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- If we want to **Add a new Audiobook** to our list we need to go to **Add new** page, were we can find a form that would ask for the neccesary fields to add a new book.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  ![doc-images/Screenshot_2021-02-16_at_16.10.14.png](doc-images/Screenshot_2021-02-16_at_16.10.14.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  After filling up the fields we would save our data and now we can find our book in our list of available books.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  ![doc-images/Screenshot_2021-02-16_at_21.53.49.png](doc-images/Screenshot_2021-02-16_at_21.53.49.png)
 
-## Learn More
+- If we want either **Update** or **Remove** **an Audiobook** we simply click on the desire book and we would find a view like the one below:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  ![doc-images/Screenshot_2021-02-16_at_15.05.19.png](doc-images/Screenshot_2021-02-16_at_15.05.19.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  If we want to **Update** our book information we simply click "Update". A view like this would appered:
 
-### Code Splitting
+  ![doc-images/Screenshot_2021-02-16_at_15.05.55.png](doc-images/Screenshot_2021-02-16_at_15.05.55.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  and we save the changes. If regret making changes we simply click "Cancel " and that would redirect us again to Browse page.
 
-### Analyzing the Bundle Size
+  ![doc-images/Screenshot_2021-02-16_at_15.07.27.png](doc-images/Screenshot_2021-02-16_at_15.07.27.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+  But if we want to **Delete** the Audiobook we just click on the desire Audiobook and click on "Delete"
 
-### Making a Progressive Web App
+  ![doc-images/Screenshot_2021-02-16_at_15.13.42.png](doc-images/Screenshot_2021-02-16_at_15.13.42.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+  After that we would be redirected to our Audiobook list were the book would be already delete from our List.
 
-### Advanced Configuration
+  ![doc-images/Screenshot_2021-02-16_at_21.55.25%201.png](doc-images/Screenshot_2021-02-16_at_21.55.25%201.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+### Libraries and Frameworks
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+**axios** →Js Library
 
-### `yarn build` fails to minify
+Used for handling Request and connection with the API.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**React Router**
+
+Routing library used by my application to navigate between different components, changing the browser URL, modifying the browser history, and keeping the UI state in sync.
+
+**styled-components** → Library
+
+Use to create styled components for managing CSS on them
+
+**nanoid** → Packet
+
+use for my unique string ID generator
+
+**prop-types** → Library
